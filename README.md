@@ -37,7 +37,21 @@
 
 > **提示：** 至少配置一个 LLM 提供商的 API Key，否则 opencode 无法工作。
 
-### 4. 访问
+### 4. 添加持久卷（可选但强烈建议）
+
+进入 Zeabur 服务 → **Storage** → **Add Persistent Volume**：
+
+| 字段 | 值 |
+|------|-----|
+| Mount Path | `/data` |
+| Size | 建议至少 **1 GB** |
+
+添加持久卷后，以下数据在服务重启后不会丢失：
+- 所有对话记录和会话历史
+- Web UI 中配置的模型、Provider 设置
+- 工具输出和快照数据
+
+### 5. 访问
 
 部署完成后，访问 Zeabur 分配的域名即可在浏览器中使用 opencode。
 
